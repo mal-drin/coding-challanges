@@ -22,4 +22,4 @@ I had to make sure that:
 ## 🎯 Outcome
 - Interactive drum kit using keyboard and mouse
 - Enhanced UI with a custom cursor
-- Better understanding of event handling and mapping inputs to actions
+- Better understanding of event handling and mapping inputs to actions.
