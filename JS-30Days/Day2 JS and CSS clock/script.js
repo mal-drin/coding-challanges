@@ -9,6 +9,7 @@ const secs = document.getElementById('sec');
 function setDate() {
   const day = new Date();
 
+
   const seconds = day.getSeconds();
   const secondsDegrees = ((seconds / 60) * 360) + 90;
   if (secondsDegrees === 90) {
