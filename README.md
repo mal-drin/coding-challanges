@@ -12,7 +12,7 @@ Whether it's algorithms, data structures, or random brain-teasers, you'll find m
 # #
 📈 Progress Tracker
 
-✅ Challenges Solved: 1
+✅ Challenges Solved: 2
 
 🚧 In Progress: 
 
