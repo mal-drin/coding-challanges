@@ -1,0 +1,54 @@
+
+   html {
+
+  background: url('./public/blue-baclground.jpg') bottom center;
+
+}
+   :root{
+     --base:#ffc600;;
+     --spacing: 10px;
+     --blur: 10px; 
+   }
+
+   img{
+    width: 500px;
+    height: auto;
+     padding: var(--spacing, 10px);
+     background: var(--base, #ffc600);
+     filter: blur(var(--blur, 10px));
+     cursor: pointer;
+     transition: transform 0.1s ease;
+     margin: 10px;
+   }
+
+   img.selected {
+     transform: scale(1.05);
+     border: 3px solid white;
+     box-shadow: 0 0 20px rgba(255, 198, 0, 0.8);
+   }
+
+   img:hover {
+     opacity: 0.1.1;
+   }
+
+   .hl {
+     color: var(--base);
+   }
+  
+
+    body {
+      text-align: center;
+      
+      color: white;
+      font-family: 'helvetica neue', sans-serif;
+      font-weight: 100;
+      font-size: 50px;
+    }
+
+    .controls {
+      margin-bottom: 50px;
+    }
+
+    input {
+      width: 100px;
+    }
