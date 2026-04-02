@@ -1,0 +1,212 @@
+:root {
+    --felt-dark: #0f4b30;
+    --felt-mid: #136a43;
+    --felt-light: #1f8f5f;
+    --rail-dark: #3b2414;
+    --rail-mid: #6c4428;
+    --gold: #f3d57a;
+    --ivory: #f9f3df;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 18px;
+    color: var(--ivory);
+    font-family: "Trebuchet MS", Verdana, serif;
+    background: radial-gradient(circle at 20% 15%, #2d2d2d 0%, #161616 35%, #0a0a0a 100%);
+}
+
+.table-shell {
+    width: min(1100px, 100%);
+    position: relative;
+    border-radius: 260px 260px 40px 40px;
+    padding: 56px 28px 26px;
+    text-align: center;
+    background:
+        radial-gradient(circle at 50% 15%, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0) 40%),
+        radial-gradient(circle at 50% 80%, rgba(0, 0, 0, 0.18) 0%, rgba(0, 0, 0, 0) 45%),
+        linear-gradient(180deg, var(--felt-light) 0%, var(--felt-mid) 35%, var(--felt-dark) 100%);
+    border: 18px solid var(--rail-dark);
+    box-shadow:
+        inset 0 0 0 2px #2f1a0f,
+        inset 0 0 0 6px var(--rail-mid),
+        0 24px 45px rgba(0, 0, 0, 0.55);
+}
+
+.table-shell::before {
+    content: "BLACKJACK PAYS 3 TO 2";
+    position: absolute;
+    top: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.95rem;
+    letter-spacing: 0.12em;
+    color: rgba(243, 213, 122, 0.95);
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.6);
+}
+
+.table-title {
+    margin: 0 0 12px;
+    font-size: clamp(1.4rem, 2.8vw, 2rem);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gold);
+    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.35);
+}
+
+.hand-area h2,
+.rank-area h3 {
+    margin: 10px 0;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+.rank-area {
+    margin: 10px 0 14px;
+    padding: 10px 14px;
+    border-radius: 999px;
+    display: inline-block;
+    background: rgba(7, 35, 24, 0.44);
+    border: 1px solid rgba(243, 213, 122, 0.45);
+}
+
+#dealer-cards,
+#player-cards {
+    min-height: 185px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 4px 10px;
+}
+
+#dealer-cards img,
+#player-cards img {
+    width: clamp(86px, 11vw, 126px);
+    height: auto;
+    margin: 0 -18px;
+    filter: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.38));
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+
+.flip-card {
+    animation: dealFlip 0.6s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+@keyframes dealFlip {
+    0% {
+        transform: perspective(900px) rotateY(0deg) translateY(-8px);
+    }
+    50% {
+        transform: perspective(900px) rotateY(90deg) translateY(0);
+    }
+    100% {
+        transform: perspective(900px) rotateY(180deg) translateY(0);
+    }
+}
+
+.action-row {
+    margin-top: 8px;
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+button {
+    min-width: 112px;
+    padding: 11px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 999px;
+    background: linear-gradient(180deg, #f5f5f5 0%, #dadada 100%);
+    color: #1e1e1e;
+    font-size: 0.9rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.28);
+    transition: transform 0.14s ease, box-shadow 0.14s ease, opacity 0.2s ease;
+}
+
+button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 16px rgba(0, 0, 0, 0.36);
+}
+
+button:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+#start-button {
+    background: linear-gradient(180deg, #ffffff 0%, #ececec 100%);
+    border: 2px solid rgba(255, 255, 255, 0.75);
+}
+
+#hit-button {
+    background: linear-gradient(180deg, #fefefe 0%, #f0f0f0 100%);
+}
+
+#stand-button {
+    background: linear-gradient(180deg, #ffd87b 0%, #e8ba54 100%);
+}
+
+#restart-button {
+    background: linear-gradient(180deg, #f9aaaa 0%, #e97f7f 100%);
+}
+
+#how-to-play-button {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    min-width: 120px;
+    padding: 9px 12px;
+    font-size: 0.75rem;
+    background: linear-gradient(180deg, #2b2b2b 0%, #111 100%);
+    color: var(--gold);
+    border: 1px solid rgba(243, 213, 122, 0.75);
+}
+
+#result {
+    min-height: 28px;
+    margin: 14px 0 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #fff7ce;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
+}
+
+@media (max-width: 700px) {
+    .table-shell {
+        border-radius: 36px;
+        border-width: 12px;
+        padding: 60px 14px 20px;
+    }
+
+    .table-shell::before {
+        font-size: 0.72rem;
+        top: 12px;
+    }
+
+    #dealer-cards,
+    #player-cards {
+        min-height: 140px;
+    }
+
+    #dealer-cards img,
+    #player-cards img {
+        margin: 0 -12px;
+    }
+}

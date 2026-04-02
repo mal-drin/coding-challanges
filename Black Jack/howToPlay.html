@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Play Blackjack</title>
+    <link rel="stylesheet" href="./css/instructions.css">
+  
+</head>
+<body>
+    <button class="back-button" onclick="window.location.href='index.html'">Back to Game</button>
+
+    <h1>How to Play Blackjack</h1>
+
+    <div class="section">
+        <h2>Objective</h2>
+        <p>Beat the dealer by getting a hand value closer to 21 than the dealer's hand, without going over 21 (busting).</p>
+    </div>
+
+    <div class="section">
+        <h2>Card Values</h2>
+        <ul>
+            <li><strong>Number Cards (2-10):</strong> Face value</li>
+            <li><strong>Face Cards (J, Q, K):</strong> Worth 10 points each</li>
+            <li><strong>Ace (A):</strong> Worth 11 or 1 point (player decides)</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Game Flow</h2>
+        <ol>
+            <li><strong>Place Your Bet</strong> - Before cards are dealt</li>
+            <li><strong>Deal:</strong> You and the dealer each get 2 cards face-up (dealer's second card is hidden)</li>
+            <li><strong>Your Turn:</strong> Choose to Hit, Stand, Double Down, or Split</li>
+            <li><strong>Dealer's Turn:</strong> Dealer reveals their hole card and follows strict rules (must hit on 16 or less, stand on 17 or more)</li>
+            <li><strong>Determine Winner:</strong> Closest to 21 without busting wins</li>
+        </ol>
+    </div>
+
+    <div class="section">
+        <h2>Your Actions</h2>
+        <ul>
+            <li><strong>Hit:</strong> Request another card to increase your hand value</li>
+            <li><strong>Stand:</strong> Take no more cards; compare your hand to the dealer's</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Winning Outcomes</h2>
+        <ul>
+            <li><strong>Blackjack (Natural 21):</strong> Ace + 10-value card on first two cards (usually pays 1.5x your bet)</li>
+            <li><strong>Regular Win:</strong> Your hand beats the dealer's hand (pays 1x your bet)</li>
+            <li><strong>Bust:</strong> Your hand exceeds 21 (you lose)</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Basic Strategy Tips</h2>
+        <ul>
+            <li>Hit on 16 or less; stand on 17 or more</li>
+            <li>If dealer shows 4, 5, or 6, be cautious (dealer likely to bust)</li>
+        </ul>
+    </div>
+
+    <div class="example">
+        <h3>Example Hand</h3>
+        <p><strong>You:</strong> King (10) + 6 = 16</p>
+        <p><strong>Dealer (showing):</strong> 7</p>
+        <p><strong>Action:</strong> Hit (dealer likely to make 17-21)</p>
+        <p><strong>Outcome:</strong> You get a 5 → Total 21 → You Win!</p>
+    </div>
+
+</body>
+</html>
